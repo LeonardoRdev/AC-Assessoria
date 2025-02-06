@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+
+#home {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    transform-style: preserve-3d; /*oq isso faz??*/
+    z-index: -1;
+}
+
+#imagem-home {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+
+    transform: translateZ(-10px) scale(2.1);
+}
+
+#home h1 {
+    font-size: 6rem;
+    color: #FFF;
+    text-shadow: 0 0 5px #000;
+}
+
+#sobre {
+    background-color: #333;
+    padding: 2rem;
+    font-size: 2rem;
+    color: #FFF;
+}
