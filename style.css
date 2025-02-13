@@ -14,10 +14,22 @@
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: sans-serif;
 }
 
 body {
     overflow-y: hidden;
+}
+
+h2 {
+    text-align: center;
+    font-size: var(--font-med);
+    margin-bottom: 5vw;
+}
+
+p {
+    font-size: var(--font-sm);
+    line-height: 1.2;
 }
 
 
@@ -76,7 +88,7 @@ header nav a:hover {
     transform: translateZ(-10px) scale(2.1);
 }
 
-#home h2 {
+#home h1 {
     font-size: var(--font-lg);
     text-align: center;
     color: #FFF;
@@ -87,13 +99,9 @@ header nav a:hover {
 /* SOBRE */
 #sobre {
     background-color: var(--cor-fundo);
+    border-radius: 2rem;
     padding: 4.5rem;
     color: #FFF;
-}
-
-#sobre h2 {
-    text-align: center;
-    font-size: 4rem;
 }
 
 #div-conteudo-sobre {
@@ -123,7 +131,6 @@ header nav a:hover {
     height: auto;
     max-width: 100%;
     object-fit: cover;
-    object-fit: cover;
 }
 
 #legenda-imagem-sobre {
@@ -140,9 +147,42 @@ header nav a:hover {
 /* SERVIÇOS */
 #servicos {
     margin-top: 20vh;
-    background-color: tomato;
 }
 
+#conteudo-servicos{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: var(--font-sm);
+}
+
+.baloes-servicos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-imagens-baloes {
+    width: 12vw;
+}
+
+.div-imagens-baloes img {
+    border-radius: 1rem;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.div-texto-servicos {
+    width: 140ch;
+    height: 100%;
+    margin-left: var(--font-sm);
+    border: solid 0.25rem #000;
+    padding: 1.5em 2.5em;
+    border-radius: 50em;
+    
+    display: flex;
+    align-items: center;
+}
 
 /* Contato */
 #contato {
