@@ -63,11 +63,12 @@ header nav a:hover {
     overflow-y: auto;
     overflow-x: hidden;
     perspective: 10px;
-    padding: 4.5rem;
+    /* padding: 0 4.5rem; */
 }
 
 /* HOME */
 #home {
+    margin: 0 4.5rem;
     position: relative;
     display: flex;
     align-items: center;
@@ -98,6 +99,7 @@ header nav a:hover {
 
 /* SOBRE */
 #sobre {
+    margin: 0 4.5rem;
     background-color: var(--cor-fundo);
     border-radius: 2rem;
     padding: 4.5rem;
@@ -186,6 +188,41 @@ header nav a:hover {
 
 /* Contato */
 #contato {
-    margin-top: 70vh;
-    width: 60ch;
+    margin-top: 20vh;
+    padding: 4.5rem;
+    background-color: #45474B;
+    color: #F5F7F8;
+}
+
+#div-informacoes-contato {
+    margin-bottom: 2em;
+}
+
+#div-informacoes-contato p {
+    line-height: 1.5;
+    font-size: var(--font-sm);
+    text-align: center;
+}
+
+#div-link-redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 0 2.5em;
+}
+
+/* Trocar por imagens depois */
+#div-link-redes-sociais p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 0.2em #000;
+    height: 5ch;
+    width: 5ch;
+    border-radius: 5em;
+    transition: scale 0.15s;
+}
+
+#div-link-redes-sociais p:hover {
+    scale: 1.1;
+    cursor: pointer;
 }
