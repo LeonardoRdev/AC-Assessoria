@@ -2,6 +2,7 @@
     --font-lg: clamp(2rem, 6vw + 1rem, 6rem);
     --font-med: clamp(1.75rem, 5vw + 0.75rem , 5rem);
     --font-med-sm: clamp(1.2rem, 3vw + 0.5rem, 3rem);
+    --font-sm-lg: clamp(1rem, 2vw + 0.5rem, 2rem);
     --font-sm: clamp(0.8rem, 1.5vw + 0.25rem , 1.5rem);
 
     --rede-social: clamp(3rem, 4vw + 0.5rem, 4rem);
@@ -49,15 +50,16 @@ header {
     z-index: 10;
     font-size: var(--font-sm);
     background-color: var(--cor-secundaria);
+    box-shadow: 0px 3px 14px #000;
     display: flex;
     align-items: center;
 }
 
 #logo {
+    z-index: 2;
     width: 6.25rem;
     padding: 0.4em;
     margin-left: 1em;
-    /* background-color: tomato; */
 }
 
 #logo a img {
@@ -66,12 +68,15 @@ header {
     height: auto;
 }
 
+#menu-hamburguer {
+    display: none;
+}
+
 nav {
     display: flex;
     align-items: center;
     margin-left: auto;
     padding: 1.2em 2em;
-    /* background-color: tomato; */
 }
 
 header nav a {
@@ -277,6 +282,63 @@ header nav a:hover {
 
 /* Responsividade */
 @media (width < 47.5rem) { 
+
+    /* HEADER */
+    header {
+        /* z-index: 100000000; */
+        box-shadow: none;
+    }
+
+    #menu-hamburguer {
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        gap: 10px;
+        padding: 1.2em 2em;
+        color: #000;
+    }
+
+    #menu-hamburguer::after, #menu-hamburguer::before {
+        content: "";
+    }
+
+    #menu-hamburguer::after, #menu-hamburguer::before, #menu-hamburguer span {
+        height: 7px;
+        width: 45px;
+        border-radius: 0.2em;
+        background-color: currentColor;
+    }
+
+    nav {
+        position: absolute;
+        width: 100%;
+        align-items: center;
+        transform: translateY(67%);
+        background-color: var(--cor-secundaria);
+        box-shadow: 0px 8px 10px -4px #000;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: auto;
+        padding: 1.2em 2em;
+    }
+    
+    .mostrar-nav {
+        display: none;
+    }
+
+    header nav a {
+        margin: 0.5em;
+        font-size: var(--font-sm-lg);
+        transition: 0.15s;
+    }
+    
+    header nav a:hover {
+        scale: 1.1;
+        text-shadow: 0 0 0.4rem #0004;
+    }
 
     /* Home */
     #home {
