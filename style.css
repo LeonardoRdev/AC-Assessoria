@@ -64,6 +64,27 @@ p {
     animation: slide-up 1.5s;
 }
 
+.esconder {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.mostrar {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.baloes-servicos div:nth-child(2) {
+    background-color: #FFF;
+    transition-delay: 0.25s;
+}
+
+/* espaço */
+
+
 
 /* HEADER */
 header {
@@ -159,6 +180,7 @@ header nav a:hover {
 #sobre {
     margin: 0 4.5em;
     padding: 3.5em;
+    padding-top: 8em;
     background-color: var(--cor-fundo);
     border-radius: 1.2rem;
     color: #FFF;
@@ -212,6 +234,7 @@ header nav a:hover {
 #servicos {
     margin-top: 20vh;
     padding: 4.5em;
+    padding-top: 8em;
     display: flex;
     flex-direction: column;
 }
@@ -338,6 +361,7 @@ header nav a:hover {
     #sobre {
         margin: 0 2.5em;
         padding: 2.5em;
+        padding-top: 8em;
     }
 
     #div-conteudo-sobre {
@@ -352,6 +376,7 @@ header nav a:hover {
     /* Serviços */
     #servicos {
         padding: 2.5em;
+        padding-top: 8em;
     }
 
     #conteudo-servicos{
