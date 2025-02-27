@@ -82,8 +82,6 @@ p {
     transition-delay: 0.25s;
 }
 
-/* espaço */
-
 
 
 /* HEADER */
@@ -159,6 +157,8 @@ header nav a:hover {
 
 #imagem-home {
     position: absolute;
+    border-radius: 0.5em;
+    /* filter: blur(2px); */
     height: 100%;
     max-width: 100%;
     object-fit: cover;
