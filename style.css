@@ -18,6 +18,7 @@
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    scroll-padding-top: 4em;
     font-family: sans-serif;
 }
 
@@ -109,10 +110,6 @@ header {
     height: auto;
 }
 
-#menu-hamburguer {
-    display: none;
-}
-
 nav {
     display: flex;
     align-items: center;
@@ -158,7 +155,6 @@ header nav a:hover {
 #imagem-home {
     position: absolute;
     border-radius: 0.5em;
-    /* filter: blur(2px); */
     height: 100%;
     max-width: 100%;
     object-fit: cover;
@@ -180,7 +176,6 @@ header nav a:hover {
 #sobre {
     margin: 0 4.5em;
     padding: 3.5em;
-    padding-top: 8em;
     background-color: var(--cor-fundo);
     border-radius: 1.2rem;
     color: #FFF;
@@ -232,9 +227,8 @@ header nav a:hover {
 
 /* SERVIÇOS */
 #servicos {
-    margin-top: 20vh;
+    margin-top: 10vh;
     padding: 4.5em;
-    padding-top: 8em;
     display: flex;
     flex-direction: column;
 }
@@ -361,7 +355,6 @@ header nav a:hover {
     #sobre {
         margin: 0 2.5em;
         padding: 2.5em;
-        padding-top: 8em;
     }
 
     #div-conteudo-sobre {
@@ -376,7 +369,6 @@ header nav a:hover {
     /* Serviços */
     #servicos {
         padding: 2.5em;
-        padding-top: 8em;
     }
 
     #conteudo-servicos{
@@ -393,4 +385,10 @@ header nav a:hover {
         gap: var(--font-sm) 0;
     }
 
+
+    /* Contato */
+    #contato {
+        margin-top: 15vh;
+        padding: 3em 0 1.5em 0;
+    }
 }
