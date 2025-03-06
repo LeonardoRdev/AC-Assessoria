@@ -4,9 +4,10 @@ const observer = new IntersectionObserver((entradas) => {
 
         // Adiciona a classe com a animação de "mostrar" quando o elemento aparecer na tela
         if (entrada.isIntersecting) {
-            entrada.target.classList.add("mostrar"); // POR QUE TARGET?? POR QUE TARGET?? POR QUE TARGET?? POR QUE TARGET?? POR QUE TARGET?? POR QUE TARGET?? POR QUE TARGET?? POR QUE TARGET?? POR QUE TARGET?? POR QUE TARGET?? 
+            entrada.target.classList.add("mostrar");
         }
 
+        // Descomentar caso queira que a animação aconteça toda vez que o elemento aparecer
         // else {
         //     entrada.target.classList.remove("mostrar");
         // }
@@ -20,14 +21,14 @@ elementosEscondidos.forEach((elemento) => {
 
 
 
-// SCROLL
+// Animação na imagem do HOME
 const wrapper = document.querySelector("#wrapper")
 const imagemFundoHome = document.querySelector("#imagem-home");
 
 // Adiciona BLUR na imagem do HOME ao scrollar para baixo
 wrapper.onscroll = () => {
     let distanciaScroll = wrapper.scrollTop;
-    let qtdBlur = Math.min(distanciaScroll / 180, 6);
+    let qtdBlur = Math.min(distanciaScroll / 180, 4);
 
     imagemFundoHome.style.filter = `blur(${qtdBlur}px)`
 }
