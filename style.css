@@ -1,9 +1,9 @@
 :root {
     --font-lg: clamp(2rem, 6vw + 1rem, 6rem);
-    --font-med: clamp(1.75rem, 5vw + 0.75rem , 5rem);
+    --font-med: clamp(1.75rem, 5vw + 0.75rem, 5rem);
     --font-med-sm: clamp(1.2rem, 3vw + 0.5rem, 3rem);
     --font-sm-lg: clamp(1rem, 2vw + 0.5rem, 2rem);
-    --font-sm: clamp(0.8rem, 1.5vw + 0.25rem , 1.5rem);
+    --font-sm: clamp(0.8rem, 1.5vw + 0.25rem, 1.5rem);
 
     --rede-social: clamp(3rem, 4vw + 0.5rem, 4rem);
 
@@ -68,14 +68,24 @@ p {
 .esconder {
     opacity: 0;
     filter: blur(5px);
-    transform: translateX(-100%);
     transition: all 1s;
 }
 
 .mostrar {
     opacity: 1;
     filter: blur(0);
-    transform: translateX(0);
+    animation: mostrar 1s;
+}
+
+/* O keyframe foi adicionado para o observer do JS conseguir ver o elemento mesmo ele estando tecnicamente "fora da tela" */
+@keyframes mostrar {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .baloes-servicos div:nth-child(2) {
@@ -233,7 +243,7 @@ header nav a:hover {
     flex-direction: column;
 }
 
-#conteudo-servicos{
+#conteudo-servicos {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     align-items: center;
@@ -327,7 +337,7 @@ header nav a:hover {
 
 
 /* Responsividade */
-@media (width < 47.5rem) { 
+@media (width < 47.5rem) {
 
     /* HEADER */
     #logo {
@@ -360,7 +370,7 @@ header nav a:hover {
     #div-conteudo-sobre {
         grid-template-columns: 1fr;
     }
-    
+
     .texto-sobre:nth-child(2) {
         grid-column: 1/2;
     }
@@ -371,7 +381,7 @@ header nav a:hover {
         padding: 2.5em;
     }
 
-    #conteudo-servicos{
+    #conteudo-servicos {
         gap: var(--rede-social);
     }
 

@@ -11,8 +11,9 @@ const observer = new IntersectionObserver((entradas) => {
         // else {
         //     entrada.target.classList.remove("mostrar");
         // }
+
     });
-});
+}, { threshold: 0.6 }); // Só observa o elemento caso ele esteja 60% visível
 
 const elementosEscondidos = document.querySelectorAll(".esconder");
 elementosEscondidos.forEach((elemento) => {
